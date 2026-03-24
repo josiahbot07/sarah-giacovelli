@@ -1,0 +1,133 @@
+.footer {
+  background: var(--sage-900);
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: auto;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-6) var(--space-8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: var(--space-12);
+}
+
+/* ── Logo ── */
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.logoMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+
+.logoText {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.about {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  max-width: 280px;
+}
+
+/* ── Columns ── */
+.col {
+  /* Base column */
+}
+
+.colHeading {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: var(--space-5);
+}
+
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footerNav a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footerNav a:hover {
+  color: white;
+}
+
+/* ── Address ── */
+.address {
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.address a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.address a:hover {
+  color: white;
+}
+
+.spacer {
+  height: var(--space-2);
+}
+
+/* ── Bottom bar ── */
+.bottom {
+  margin-top: var(--space-12);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    padding: var(--space-12) var(--space-6) var(--space-6);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}

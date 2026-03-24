@@ -1,0 +1,295 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* ── Scrolled state (light background) ── */
+.scrolled {
+  background-color: rgba(246, 244, 241, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
+}
+
+.inner {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+/* ══════════════════════════════════════
+   Default state: LIGHT text (over dark hero)
+   ══════════════════════════════════════ */
+
+/* ── Logo ── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  color: white;
+  flex-shrink: 0;
+  transition: color 0.35s ease;
+}
+
+.logo:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.logoMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.35s ease;
+}
+
+.logoText {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* ── Nav links (default: light) ── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-left: auto;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: color 0.25s ease, background-color 0.25s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.navLink.active {
+  color: white;
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: var(--space-4);
+  right: var(--space-4);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 1px;
+  transition: background-color 0.35s ease;
+}
+
+.chevron {
+  transition: transform 0.2s ease;
+}
+
+/* ── Phone link (default: light) ── */
+.phoneLink {
+  display: none;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+  transition: color 0.35s ease;
+}
+
+.phoneLink:hover {
+  color: white;
+}
+
+/* ── Hamburger (default: light) ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: var(--space-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: white;
+  border-radius: 1px;
+  transition: transform 0.2s ease, background-color 0.35s ease;
+}
+
+/* ══════════════════════════════════════
+   Scrolled state: DARK text (light background)
+   ══════════════════════════════════════ */
+
+.scrolled .logo {
+  color: var(--color-text-heading);
+}
+
+.scrolled .logo:hover {
+  color: var(--color-text-heading);
+}
+
+.scrolled .logoMark {
+  background: var(--sage-800);
+}
+
+.scrolled .navLink {
+  color: var(--stone-700);
+}
+
+.scrolled .navLink:hover {
+  color: var(--sage-800);
+  background-color: var(--sage-100);
+}
+
+.scrolled .navLink.active {
+  color: var(--sage-800);
+}
+
+.scrolled .navLink.active::after {
+  background: var(--sage-600);
+}
+
+.scrolled .phoneLink {
+  color: var(--sage-800);
+}
+
+.scrolled .phoneLink:hover {
+  color: var(--sage-700);
+}
+
+.scrolled .hamburger span {
+  background: var(--stone-800);
+}
+
+/* ── Dropdown (always has its own light background) ── */
+.dropdown {
+  position: relative;
+}
+
+.dropdownPanel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  padding-top: var(--space-2);
+}
+
+.dropdown:hover .dropdownPanel,
+.dropdown:focus-within .dropdownPanel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown:hover .chevron {
+  transform: rotate(180deg);
+}
+
+.dropdownInner {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2);
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdownLink {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--stone-700);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.dropdownLink:hover {
+  color: var(--sage-800);
+  background: var(--sage-100);
+}
+
+.dropdownLink.active {
+  color: var(--sage-800);
+  background: var(--sage-100);
+  font-weight: 500;
+}
+
+/* ── Responsive ── */
+@media (min-width: 1025px) {
+  .phoneLink {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+
+  .phoneLink {
+    display: block;
+    margin-left: auto;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .phoneLink {
+    display: none;
+  }
+
+  .logoText {
+    font-size: 1.15rem;
+  }
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2C3E2D"/>
+      <stop offset="100%" stop-color="#3A5240"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="rgba(255,255,255,0.06)"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Decorative accent line -->
+  <rect x="80" y="180" width="4" height="120" rx="2" fill="#A67C52"/>
+
+  <!-- Logo mark -->
+  <rect x="80" y="80" width="56" height="56" rx="8" fill="rgba(255,255,255,0.12)"/>
+  <text x="108" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="600" fill="white">G</text>
+
+  <!-- Firm name -->
+  <text x="104" y="230" font-family="Georgia, 'Cormorant Garamond', serif" font-size="64" font-weight="500" fill="white" letter-spacing="-1">Giacovelli Law</text>
+
+  <!-- Divider line -->
+  <rect x="104" y="255" width="80" height="2" rx="1" fill="#A67C52" opacity="0.6"/>
+
+  <!-- Subtitle -->
+  <text x="104" y="298" font-family="system-ui, 'DM Sans', sans-serif" font-size="24" font-weight="400" fill="rgba(255,255,255,0.6)" letter-spacing="3">FAMILY LAW &amp; CRIMINAL DEFENSE</text>
+
+  <!-- Location -->
+  <text x="104" y="340" font-family="system-ui, 'DM Sans', sans-serif" font-size="18" font-weight="400" fill="rgba(255,255,255,0.35)">Salt Lake City, Utah</text>
+
+  <!-- Bottom tagline -->
+  <text x="104" y="530" font-family="Georgia, 'Cormorant Garamond', serif" font-size="28" font-weight="400" font-style="italic" fill="rgba(255,255,255,0.4)">Experienced Advocacy. Personal Attention.</text>
+
+  <!-- Decorative element right side -->
+  <rect x="900" y="100" width="220" height="430" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <rect x="940" y="140" width="140" height="350" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- Contact hint -->
+  <text x="104" y="575" font-family="system-ui, 'DM Sans', sans-serif" font-size="15" font-weight="500" fill="rgba(255,255,255,0.3)" letter-spacing="1">801.566.0500</text>
+</svg>

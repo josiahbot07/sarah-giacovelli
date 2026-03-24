@@ -1,0 +1,233 @@
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(to right, rgba(44, 62, 45, 0.92) 0%, rgba(44, 62, 45, 0.75) 60%, rgba(44, 62, 45, 0.65) 100%),
+    url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1800&q=80') center 40% / cover no-repeat;
+  overflow: hidden;
+  padding-top: var(--header-height);
+}
+
+/* ── Background decorations ── */
+.bgPattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image:
+    radial-gradient(circle at 2px 2px, rgba(255,255,255,0.4) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.bgGradient {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 70%;
+  height: 140%;
+  background: radial-gradient(ellipse at center, rgba(74, 104, 80, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Content ── */
+.inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-6);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.content {
+  animation: heroContentIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes heroContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--sage-300);
+  margin-bottom: var(--space-6);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid rgba(176, 203, 181, 0.25);
+  border-radius: var(--radius-sm);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 4.25rem;
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: white;
+  margin-bottom: var(--space-6);
+}
+
+.title em {
+  font-style: italic;
+  color: var(--sage-300);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 520px;
+  margin-bottom: var(--space-10);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* ── Decorative side cards ── */
+.decorSide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  animation: heroDecorIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+  opacity: 0;
+}
+
+@keyframes heroDecorIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.decorCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+
+.decorAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--copper-600);
+  border-radius: 0 2px 2px 0;
+}
+
+.decorAccent2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--sage-400);
+  border-radius: 0 2px 2px 0;
+}
+
+.decorStat {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.decorStatLabel {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+}
+
+/* ── Bottom fade ── */
+.fadeBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--color-bg));
+  pointer-events: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    padding: var(--space-16) var(--space-6) var(--space-20);
+    gap: var(--space-10);
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .decorSide {
+    flex-direction: row;
+  }
+
+  .decorCard {
+    flex: 1;
+    padding: var(--space-6);
+  }
+
+  .decorStat {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    padding: var(--space-12) var(--space-6) var(--space-16);
+  }
+
+  .title {
+    font-size: 2.35rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .decorSide {
+    flex-direction: column;
+  }
+}

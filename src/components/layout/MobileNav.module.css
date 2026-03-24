@@ -1,0 +1,160 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(26, 24, 20, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 201;
+  width: 320px;
+  max-width: 85vw;
+  background: var(--color-bg-elevated);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-xl);
+}
+
+.panel.open {
+  transform: translateX(0);
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.panelTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+}
+
+.closeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  color: var(--stone-600);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.closeBtn:hover {
+  color: var(--stone-900);
+  background: var(--stone-200);
+}
+
+.navList {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4) var(--space-2);
+}
+
+.link,
+.groupToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-4) var(--space-4);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--stone-800);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.link:hover,
+.groupToggle:hover {
+  background: var(--sage-100);
+  color: var(--sage-800);
+}
+
+.link.active {
+  color: var(--sage-800);
+  background: var(--sage-100);
+}
+
+.groupChevron {
+  transition: transform 0.2s ease;
+}
+
+.groupChevron.expanded {
+  transform: rotate(180deg);
+}
+
+.groupItems {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.groupItems.expanded {
+  max-height: 500px;
+}
+
+.subLink {
+  display: block;
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-10);
+  font-size: 0.9rem;
+  color: var(--stone-600);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.subLink:hover {
+  color: var(--sage-800);
+  background: var(--sage-100);
+}
+
+.subLink.active {
+  color: var(--sage-800);
+  font-weight: 500;
+}
+
+.panelFooter {
+  padding: var(--space-6);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.phoneBtn {
+  display: block;
+  width: 100%;
+  padding: var(--space-4);
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: white;
+  background: var(--sage-800);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.phoneBtn:hover {
+  background: var(--sage-700);
+  color: white;
+}

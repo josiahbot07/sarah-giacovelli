@@ -1,0 +1,17 @@
+.welcome {
+  text-align: center;
+}
+
+.body {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--stone-700);
+}
+
+.body p {
+  margin-bottom: var(--space-5);
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}

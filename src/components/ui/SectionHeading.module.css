@@ -1,0 +1,50 @@
+.heading {
+  margin-bottom: var(--space-12);
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--sage-600);
+  margin-bottom: var(--space-4);
+}
+
+.light .label {
+  color: var(--sage-300);
+}
+
+.title {
+  margin-bottom: var(--space-4);
+}
+
+.light .title {
+  color: white;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  line-height: 1.65;
+}
+
+.center .subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.light .subtitle {
+  color: rgba(255, 255, 255, 0.65);
+}

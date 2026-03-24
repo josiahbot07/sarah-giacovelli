@@ -1,0 +1,126 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.row:first-child {
+  grid-template-columns: 180px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--stone-700);
+}
+
+.input,
+.select,
+.textarea {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--sage-500);
+  box-shadow: 0 0 0 3px rgba(110, 148, 118, 0.15);
+}
+
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2378716A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: var(--space-10);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.radioGroup {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: var(--stone-700);
+}
+
+.radio input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--sage-600);
+}
+
+/* ── Success state ── */
+.success {
+  text-align: center;
+  padding: var(--space-16) var(--space-8);
+  background: var(--sage-100);
+  border-radius: var(--radius-xl);
+}
+
+.success svg {
+  color: var(--sage-600);
+  margin-bottom: var(--space-5);
+}
+
+.success h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: var(--space-3);
+}
+
+.success p {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .row:first-child {
+    grid-template-columns: 1fr;
+  }
+
+  .radioGroup {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}
