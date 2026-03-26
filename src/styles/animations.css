@@ -62,6 +62,10 @@
     transition-duration: 0.01ms !important;
   }
 
+  html {
+    scroll-behavior: auto !important;
+  }
+
   [data-reveal],
   [data-reveal-stagger] > * {
     opacity: 1;

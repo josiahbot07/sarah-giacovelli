@@ -6,6 +6,8 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Family Law',
     tagline: 'Protecting what matters most — your family',
     metaTitle: 'Family Law Attorney | Giacovelli Law | Salt Lake City',
+    metaDescription:
+      'Salt Lake City family law attorney handling divorce, custody, parental rights, and property distribution. Experienced advocacy from Giacovelli Law. Call 801.566.0500.',
     heroImage: 'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=1600&q=80',
     description: [
       'Family law is a broad area defining the legal responsibilities of parties involved in some sort of intimate or family relationship. This encompasses separation, divorce, child custody, and parental rights issues.',
@@ -24,6 +26,8 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Divorce',
     tagline: 'Compassionate guidance through difficult transitions',
     metaTitle: 'Divorce Lawyer | Giacovelli Law | Salt Lake City',
+    metaDescription:
+      'Compassionate divorce attorney in Salt Lake City. Giacovelli Law handles asset division, custody disputes, alimony, and mediation. Schedule a consultation today.',
     heroImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80',
     description: [
       'Going through a separation with your spouse can be a difficult and extremely emotional time. The right fit of attorney and client is paramount in ensuring that the divorce process goes as smoothly as possible.',
@@ -44,6 +48,8 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Child Custody',
     tagline: 'Putting children\'s well-being first',
     metaTitle: 'Child Custody Attorney | Giacovelli Law | Salt Lake City',
+    metaDescription:
+      'Child custody attorney in Salt Lake City, Utah. Giacovelli Law handles sole and joint custody, parenting plans, modifications, and relocation cases. Call 801.566.0500.',
     heroImage: 'https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=1600&q=80',
     description: [
       'We emphasize resolving custody matters quickly while minimizing harm to children. As parent-attorneys, we combine legal expertise with sensitivity to protect children\'s welfare.',
@@ -64,6 +70,8 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Child Support',
     tagline: 'Fair support for your children\'s needs',
     metaTitle: 'Child Support Enforcement | Giacovelli Law | Salt Lake City',
+    metaDescription:
+      'Child support attorney in Salt Lake City. Giacovelli Law assists with support calculations, enforcement, modifications, and interstate matters. Call 801.566.0500.',
     heroImage: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1600&q=80',
     description: [
       'One of the more thorny issues couples face upon the breakup of their relationship is child support. In Utah, child support encompasses financial payments for healthcare, childcare expenses, and daily living necessities like food, shelter, and clothing.',
@@ -84,6 +92,8 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Juvenile Law',
     tagline: 'Protecting your child\'s rights and future',
     metaTitle: 'Juvenile Law Attorney | Giacovelli Law | Salt Lake City',
+    metaDescription:
+      'Juvenile law attorney in Salt Lake City with experience in both prosecution and defense. Giacovelli Law protects your child\'s rights and future. Call 801.566.0500.',
     heroImage: 'https://images.unsplash.com/photo-1589391886645-d51941baf7fb?w=1600&q=80',
     description: [
       'If your child is facing criminal charges, contact us. Juvenile law differs significantly from the adult justice system.',
@@ -105,6 +115,8 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Adoptions',
     tagline: 'Building families with care and compassion',
     metaTitle: 'Adoption Attorney | Giacovelli Law | Salt Lake City',
+    metaDescription:
+      'Adoption attorney in Salt Lake City, Utah. Giacovelli Law guides you through foster, international, and stepparent adoptions with care and compassion. Call 801.566.0500.',
     heroImage: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1600&q=80',
     description: [
       'If you\'ve chosen to adopt or you are considering doing so, we are here to help. Our adoption services are designed to help adoptive parents complete the adoption as quickly and painlessly as possible.',
@@ -125,6 +137,8 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Criminal Defense',
     tagline: 'Experienced defense when it matters most',
     metaTitle: 'Criminal Defense Attorney | Giacovelli Law | Salt Lake City',
+    metaDescription:
+      'Criminal defense attorney in Salt Lake City with jury trial experience. Former prosecutor handling DUI, assault, drug charges, and more. Call Giacovelli Law at 801.566.0500.',
     heroImage: 'https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=1600&q=80',
     description: [
       'Facing criminal charges, whether a misdemeanor or more serious felony offense, is stressful and may have a serious impact on your life.',

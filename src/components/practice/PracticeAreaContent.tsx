@@ -27,7 +27,7 @@ export function PracticeAreaContent({ area }: Props) {
             <ul className={styles.servicesList}>
               {area.services.map((s, i) => (
                 <li key={i}>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M3.5 9l4 4L14.5 5.5" />
                   </svg>
                   <span>{s}</span>
@@ -52,7 +52,7 @@ export function PracticeAreaContent({ area }: Props) {
               {otherAreas.map((pa) => (
                 <Link key={pa.slug} to={`/practice/${pa.slug}`} className={styles.sidebarLink}>
                   {pa.title}
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M5 3l4 4-4 4" />
                   </svg>
                 </Link>

@@ -27,14 +27,14 @@
 
 /* ── Variants ── */
 .primary {
-  background: var(--copper-600);
+  background: var(--copper-700);
   color: white;
-  border-color: var(--copper-600);
+  border-color: var(--copper-700);
 }
 
 .primary:hover {
-  background: var(--copper-500);
-  border-color: var(--copper-500);
+  background: var(--copper-600);
+  border-color: var(--copper-600);
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
   color: white;

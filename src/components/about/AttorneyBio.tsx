@@ -17,7 +17,7 @@ export function AttorneyBio({ name, role, bio, credentials, photo }: Props) {
       <div className={styles.avatarWrap}>
         <div className={styles.avatar}>
           {photo ? (
-            <img src={photo} alt={name} className={styles.photo} />
+            <img src={photo} alt={name} className={styles.photo} width={120} height={120} loading="lazy" />
           ) : (
             <span className={styles.initials}>
               {name.split(' ').map(n => n[0]).join('')}
@@ -42,7 +42,7 @@ export function AttorneyBio({ name, role, bio, credentials, photo }: Props) {
           <ul>
             {credentials.map((c, i) => (
               <li key={i}>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M3 8l3.5 3.5L13 5" />
                 </svg>
                 {c}

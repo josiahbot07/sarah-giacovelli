@@ -28,6 +28,7 @@
   --stone-50: #FBFAF8;
 
   /* ── Copper Accent ── */
+  --copper-700: #8B6640;
   --copper-600: #A67C52;
   --copper-500: #BF9168;
   --copper-400: #D4AD8A;
@@ -47,8 +48,8 @@
   --color-border-light: var(--stone-200);
 
   /* ── Typography ── */
-  --font-heading: 'Cormorant Garamond', 'Georgia', serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-heading: 'Cormorant Garamond', 'Cormorant Garamond Fallback', 'Georgia', serif;
+  --font-body: 'DM Sans', 'DM Sans Fallback', 'Arial', sans-serif;
 
   /* ── Spacing ── */
   --space-1: 0.25rem;
@@ -81,6 +82,25 @@
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
+}
+
+/* ── Font fallback metrics (reduce CLS from font swap) ── */
+@font-face {
+  font-family: 'Cormorant Garamond Fallback';
+  src: local('Georgia');
+  size-adjust: 113%;
+  ascent-override: 88%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'DM Sans Fallback';
+  src: local('Arial');
+  size-adjust: 96%;
+  ascent-override: 95%;
+  descent-override: 25%;
+  line-gap-override: 0%;
 }
 
 /* ── Reset ── */

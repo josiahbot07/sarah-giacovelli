@@ -12,8 +12,8 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className={styles.success}>
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <div className={styles.success} role="status" aria-live="polite">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <circle cx="24" cy="24" r="20" />
           <path d="M15 24l6 6 12-12" />
         </svg>

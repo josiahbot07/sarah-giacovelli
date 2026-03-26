@@ -34,6 +34,7 @@
 .imageWrap {
   position: relative;
   height: 260px;
+  aspect-ratio: 800 / 534;
   overflow: hidden;
 }
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { navigation } from '@/data/navigation'
 import { contactInfo } from '@/data/contact'
@@ -8,6 +8,7 @@ import styles from './Header.module.css'
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const hamburgerRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -44,7 +45,7 @@ export function Header() {
                     }
                   >
                     {item.label}
-                    <svg className={styles.chevron} width="10" height="6" viewBox="0 0 10 6" fill="none">
+                    <svg className={styles.chevron} width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
                       <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </NavLink>
@@ -84,6 +85,7 @@ export function Header() {
           </a>
 
           <button
+            ref={hamburgerRef}
             className={styles.hamburger}
             onClick={() => setMobileOpen(true)}
             aria-label="Open navigation menu"
@@ -96,7 +98,7 @@ export function Header() {
         </div>
       </header>
 
-      <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} />
+      <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} triggerRef={hamburgerRef} />
     </>
   )
 }

@@ -1,26 +1,33 @@
-import { useEffect } from 'react'
 import { useRevealGroup } from '@/hooks/useIntersectionObserver'
+import { SEO } from '@/components/SEO'
+import { StructuredData } from '@/components/StructuredData'
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { AttorneyBio } from '@/components/about/AttorneyBio'
 import { TeamMember } from '@/components/about/TeamMember'
+import { attorneySchema } from '@/data/structuredData'
 import { team } from '@/data/team'
 import styles from './AboutPage.module.css'
 
 export function AboutPage() {
   const teamRef = useRevealGroup()
 
-  useEffect(() => {
-    document.title = 'About | Giacovelli Law'
-  }, [])
-
   const attorney = team[0]
   const staff = team.slice(1)
 
   return (
     <div className={styles.page}>
+      <SEO
+        title="About | Giacovelli Law | Salt Lake City Attorney"
+        description="Meet Sarah Giacovelli, a seasoned trial attorney licensed since 2000 with extensive experience in family law, criminal defense, and juvenile court proceedings in Salt Lake City, Utah."
+        canonical="/about"
+      />
+      <StructuredData data={attorneySchema} />
+
       {/* Page hero */}
       <section className={styles.hero}>
         <div className="container">
+          <Breadcrumbs items={[{ label: 'Home', path: '/' }, { label: 'About', path: '/about' }]} />
           <span className={styles.label}>About the Firm</span>
           <h1 className={styles.heroTitle}>
             Dedicated Legal Counsel<br />

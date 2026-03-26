@@ -6,6 +6,7 @@ export interface PracticeArea {
   services: string[]
   closingCta: string
   metaTitle: string
+  metaDescription: string
   heroImage: string
 }
 

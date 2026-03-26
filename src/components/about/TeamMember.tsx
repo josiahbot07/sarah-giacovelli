@@ -12,7 +12,7 @@ export function TeamMember({ name, role, bio, photo }: Props) {
     <div className={styles.member}>
       <div className={styles.avatar}>
         {photo ? (
-          <img src={photo} alt={name} className={styles.photo} />
+          <img src={photo} alt={name} className={styles.photo} width={96} height={96} loading="lazy" />
         ) : (
           <span>
             {name.split(' ').map(n => n[0]).join('')}
